@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo systemctl stop myapp.service
+sudo apt-get install python3-pip -y
+pip3 install -r /home/ubuntu/python-test/requirements.txt

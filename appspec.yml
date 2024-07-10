@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/python-test
+file_exists_behavior: OVERWRITE
+hooks:
+  BeforeInstall:
+    - location: /home/ubuntu/python-test/install-dependencies
+      runas: root
+  AfterInstall:
+    - location: /after-install
+      runas: root
